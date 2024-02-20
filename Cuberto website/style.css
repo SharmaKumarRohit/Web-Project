@@ -1,0 +1,839 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: b;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: #ffff;
+    background-color: #000;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: a;
+    src: url(./font/AvertaCY-Light.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(./font/AvertaCY-Regular.ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(./font/AvertaCY-Bold.ttf);
+}
+@font-face {
+    font-family: d;
+    src: url(./font/AvertaCY-Semibold.ttf);
+}
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    animation: anim2 1s cubic-bezier(0.19, 1, 0.22, 1) 7s both;
+}
+
+#loader .wrapperload {
+    width: 500px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.elm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.elm img {
+    width: 100px;
+}
+
+.wrapperload .elm:nth-child(1) {
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
+}
+
+.wrapperload .elm:nth-child(2) {
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+
+.wrapperload .elm:nth-child(3) {
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+@keyframes anim {
+    to {
+        margin-top: -100px;
+    }
+}
+
+@keyframes anim2 {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+#main {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#home {
+    width: 100%;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw 3.5vw;
+}
+
+#nav .logo img {
+    width: 100px;
+}
+
+#nav #right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000;
+    font-size: 1.2vw;
+    letter-spacing: -1px;
+}
+
+#nav i {
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+#home #homemain {
+    width: 100%;
+    padding: 12vw 15vw;
+}
+
+#homemain h1 {
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-size: 1.34vw;
+}
+
+.headings {
+    display: flex;
+    gap: 40px;
+}
+
+.headings h1 {
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.headings .hvr1 {
+    background-image: url('./img/0.gif');
+}
+
+.headings .hvr2 {
+    background-image: url('./img/2.gif');
+}
+
+.headings .hvr3 {
+    background-image: url('./img/3.gif');
+}
+
+#homemain .headings h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    font-size: 7vw;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -8px;
+    font-family: c;
+}
+
+#homemain .headings h1:hover {
+    color: #000;
+}
+
+#homelast {
+    padding: 5vw 15vw;
+}
+
+#homelast p {
+    width: 58%;
+    font-size: 1.6vw;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+#homelast p::selection {
+    color: #ffff;
+    background-color: #000;
+}
+
+#featured {
+    padding: 10vw 15vw;
+}
+
+.fheading>h1 {
+    line-height: 1;
+    font-size: 4vw;
+    font-weight: 400;
+}
+
+.fheading>h1:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+}
+
+#fimages {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5vw;
+}
+
+#fleft {
+    overflow: hidden;
+    width: 45%;
+    height: inherit;
+}
+
+.fleftelm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+}
+
+.fleftelm h1 {
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 1.5vw 0;
+}
+
+.fleftelm h3 {
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+
+.fleftelm h4 {
+    opacity: .5;
+}
+
+#fright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 45%;
+    min-height: inherit;
+}
+
+#fright .images {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#fright .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btndiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btndiv button {
+    display: block;
+    padding: 1.3vw 2.5vw;
+    border-radius: 100px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.hoverMe {
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.hoverMe:hover {
+    color: #fff;
+}
+
+.hoverMe::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #161616;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .3s;
+}
+
+.hoverMe:hover::after {
+    height: 100%;
+}
+#dev {
+    width: 100%;
+    padding: 5vw 15vw;
+}
+
+#dev h1 {
+    font-size: 3.8vw;
+    font-weight: 400;
+    width: 60%;
+    line-height: 1;
+}
+
+#dev p {
+    font-size: 1.5vw;
+    margin-top: 3vw;
+    letter-spacing: -.5px;
+    width: 60%;
+}
+
+#slides {
+    padding: 3vw 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide {
+    width: 31%;
+}
+
+.slide .img {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide .img .pos {
+    object-position: 18% 18%;
+}
+
+.slide .tag {
+    width: fit-content;
+    border-radius: 100px;
+    padding: 10px 22px;
+    background-color: #f7f7f7;
+    margin: 20px 0;
+}
+
+.slide h3 {
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: -.5px;
+}
+
+.wheading {
+    width: 100%;
+    padding: 5vw 15vw;
+}
+
+.wheading h1 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5vw 10vw;
+}
+
+.content-box .content {
+    width: 32%;
+    height: 300px;
+}
+
+.content .content-img {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content .content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content .content-img .anotherPos {
+    object-position: 42% 42%;
+}
+
+.content .content-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1vw;
+}
+
+.content-text i {
+    font-size: 20px;
+}
+
+.content-text h4 {
+    font-weight: 500;
+}
+
+#lastElm {
+    width: 100%;
+    background-color: #161616;
+}
+
+#lastElm .lastOne {
+    width: 100%;
+    padding: 8vw 10vw;
+}
+
+.lastOne h1 {
+    font-size: 5vw;
+    color: #ffff;
+}
+
+.lastOne h1 span {
+    font-weight: 500;
+}
+
+.lastOne .line {
+    width: 42%;
+    height: 3px;
+    background-color: #888;
+    border-radius: 10px;
+}
+
+#lastElm .lastTwo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8vw 10vw;
+    color: #fff;
+}
+
+.lastTwo .lleft {
+    width: 45%;
+    height: 100%;
+}
+.lleft .smline {
+    width: 163.2px;
+    height: 2px;
+    background-color: #333;
+    margin-top: .2vw;
+    margin-bottom: 2vw;
+}
+
+.lleft p {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 2vw;
+}
+
+.lleft h3,
+.lleft small {
+    color: #dadada;
+}
+
+.lastTwo .lright {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    height: 100%;
+}
+
+.lright .links {
+    display: flex;
+    flex-direction: column;
+    gap: 6.5vw;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: .5rem;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #000;
+}
+
+.anibtn {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.anibtn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2.5px;
+    border-radius: 10px;
+    background-color: #000;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .3s;
+}
+
+.anibtn:hover::before {
+    width: 100%;
+}
+
+.animbtn {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.animbtn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2.5px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .3s;
+}
+
+.animbtn:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #nav a {
+        font-size: 2.5vw;
+    }
+
+    #home #homemain {
+        padding: 5vw 8vw;
+    }
+
+    #homemain h1 {
+        font-size: 2.5vw;
+    }
+
+    #homemain .headings h1 {
+        font-size: 7.5vw;
+        letter-spacing: -2px;
+    }
+
+    #homelast {
+        padding: 5vw 8vw;
+    }
+
+    #homelast p {
+        width: 70%;
+        font-size: 2.2vw;
+    }
+
+    #featured {
+        padding: 5vw 8vw;
+    }
+
+    .fheading>h1 {
+        font-size: 6vw;
+    }
+
+    #fimages {
+        display: block;
+        padding-top: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    #fleft {
+        width: 100%;
+        height: 30%;
+    }
+
+    .fleftelm {
+        display: block;
+    }
+
+    .fleftelm h3 {
+        font-size: 2vw;
+    }
+
+    #fright {
+        display: block;
+        width: 100%;
+        height: 70%;
+    }
+
+    #fright .images {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btndiv button {
+        font-size: 2.2vw;
+    }
+
+    #dev {
+        padding: 5vw 8vw;
+    }
+
+    #dev h1 {
+        font-size: 5.5vw;
+    }
+
+    #dev p {
+        font-size: 2vw;
+    }
+
+    #slides {
+        flex-direction: column;
+        padding: 5vw 8vw;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .slide h3 {
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .slide .img .pos {
+        object-position: 30% 30%;
+    }
+
+    .wheading {
+        padding: 5vw 8vw;
+    }
+
+    .wheading h1 {
+        font-size: 6vw;
+    }
+
+    .content-box {
+        flex-direction: column;
+        padding: 5vw 8vw;
+    }
+
+    .content-box .content {
+        width: 100%;
+    }
+
+    .content .content-text {
+        margin: 1.5vw 0;
+    }
+
+    #lastElm .lastOne,
+    #lastElm .lastTwo {
+        padding: 8vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #nav .logo img {
+        width: 80px;
+    }
+
+    #nav a {
+        font-size: 4vw;
+    }
+
+    #home #homemain {
+        padding: 5vw 5.5vw;
+    }
+
+    #homemain h1 {
+        font-size: 5vw;
+        margin-bottom: 2vw;
+    }
+
+    .headings {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #homemain .headings h1 {
+        font-size: 20vw;
+    }
+
+    #homelast {
+        padding: 5vw 5.5vw;
+    }
+
+    #homelast p {
+        width: 100%;
+        font-size: 5vw;
+        color: #757575;
+    }
+
+    #featured {
+        padding: 5vw 5.5vw;
+    }
+
+    .fheading>h1 {
+        font-size: 12.2vw;
+    }
+
+    .fleftelm h3 {
+        font-size: 4.5vw;
+        margin-bottom: 4vw;
+    }
+
+    .fleftelm h1 {
+        font-size: 7vw;
+        margin-bottom: 4.5vw;
+    }
+
+    .fleftelm h4 {
+        font-size: 4vw;
+    }
+
+    .btndiv button {
+        font-size: 4.4vw;
+        padding: 4.2vw 8vw;
+    }
+
+    #dev {
+        padding: 5vw 5.5vw;
+    }
+
+    #dev h1 {
+        width: 100%;
+        font-size: 10vw;
+    }
+
+    #dev p {
+        width: 100%;
+        font-size: 5vw;
+        color: #757575;
+    }
+
+    #slides {
+        padding: 5vw 5.5vw;
+    }
+
+    .slide h3 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+
+    .slide .img .pos {
+        object-position: 14% 50%;
+    }
+
+    .wheading {
+        padding: 5vw 5.5vw;
+    }
+
+    .wheading h1>br {
+        display: none;
+    }
+
+    .wheading h1 {
+        font-size: 8.7vw;
+    }
+
+    .content-box {
+        padding: 5vw 5.5vw;
+    }
+
+    #lastElm .lastOne {
+        padding: 5vw 5.5vw;
+    }
+
+    .lastOne h1 {
+        font-size: 12vw;
+    }
+
+    .lastOne .line {
+        width: 90%;
+        height: 2px;
+    }
+
+    #lastElm .lastTwo {
+        flex-direction: column;
+        padding: 5vw 5.5vw;
+    }
+
+    .lastTwo .lleft {
+        width: 100%;
+        margin-bottom: 5vw;
+    }
+
+    .lleft p>br {
+        display: none;
+    }
+
+    .lleft p {
+        font-size: 3.9vw;
+    }
+
+    .lleft small {
+        font-size: 3.8vw;
+    }
+
+    .lastTwo .lright {
+        width: 100%;
+    }
+}
