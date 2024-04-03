@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #f4f4f4;
+    --black: #000300;
+    --blue: #276df1;
+    --gray: #a1a1a1;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--white);
+    padding: .5rem;
+}
+
+li {
+    list-style: none;
+}
+
+/* ########################### utility classes #################### */
+.gray {
+    color: var(--gray);
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.scale_btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray);
+    transform: scale(0, 1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.scale_btn:hover::before {
+    transform: scale(1, 1);
+}
+
+.scale_circle::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: var(--white);
+    border-radius: 50%;
+    z-index: -5;
+    transition: all 0.4s ease-in-out;
+}
+
+.scale_circle:hover::before {
+    width: 125px;
+    height: 125px;
+    color: var(--black);
+}
+
+#white {
+    color: var(--white);
+}
+
+/* ######################### nav styling ##################### */
+
+header.header {
+    position: relative;
+    height: 80px;
+}
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav.nav .top,
+nav.nav .center,
+nav.nav .bottom {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+nav.nav .half_circle {
+    height: 40px;
+    width: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    position: relative;
+}
+
+nav.nav .half_circle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--black);
+}
+
+nav.nav .center .link {
+    color: var(--gray);
+    transition: color .2s ease-in-out;
+}
+
+nav.nav .center .link:hover {
+    color: var(--white);
+}
+
+button.btn {
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--blue);
+    color: var(--white);
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 99;
+    transition: color 0.3s ease-in-out;
+}
+
+button.btn:hover {
+    color: var(--black);
+}
+
+#close,
+#open {
+    display: none;
+}
+
+/* ################### section1 styling ################# */
+section.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 7.4rem 0 5rem 0;
+}
+
+section.section h1 {
+    font-size: 5rem;
+}
+
+section.section p {
+    font-size: 1.8rem;
+}
+
+section.section button:nth-of-type(1) {
+    margin-top: 1rem;
+}
+
+/* ################### section1 styling ################# */
+
+section.section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.4rem;
+}
+
+/* ################### section1 styling ################# */
+section.section3 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 0;
+    flex-wrap: wrap;
+}
+
+div.card {
+    border: 0.2rem solid var(--gray);
+    flex: 1 1 350px;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+div.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+div.card h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+div.card p {
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+
+a.more_content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+a.more_content h4{
+    font-weight: 500;
+}
+
+a.more_content span {
+    display: inline-block;
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+a.more_content:hover span {
+    transform: translateX(0.35rem);
+}
+
+div.card2 {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 0;
+}
+
+/* ########################## Mobile device ########################## */
+
+@media screen and (max-width: 900px) {
+    nav.nav .top,
+    nav.nav .center,
+    nav.nav .bottom {
+        gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav.nav .bottom {
+        display: none;
+    }
+
+    nav.nav .center {
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: var(--black);
+        z-index: 999;
+        box-shadow: 0 2px 10px 0 rgba(170, 170, 170, 0.373);
+        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .menu_items {
+        transform: translateY(-150%);
+    }
+
+    #close,
+    #open {
+        display: block;
+        font-size: 2.4rem;
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 55%;
+    }
+
+    br {
+        display: none;
+    }
+
+    #close,
+    #open {
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    nav.nav .top {
+        gap: 1rem;
+    }
+
+    nav.nav .half_circle {
+        height: 30px;
+        width: 30px;
+    }
+
+    section.section {
+        padding-top: 5rem;
+    }
+
+    section.section3 {
+        padding-bottom: 2rem;
+    }
+
+    #close,
+    #open {
+        top: 2.8rem;
+    }
+
+    nav.nav .top a,
+    nav.nav .center a {
+        font-size: 1.8rem;
+    }
+}
