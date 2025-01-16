@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: a;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: a;
+    src: url(./fonts/MonumentExtended-Regular.otf);
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: rgb(122, 223, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader h1 {
+    font-size: 5vw;
+    font-family: a;
+    font-weight: 100;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: #f8f8f8;
+    color: #222;
+    position: relative;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    padding: 0 3vw;
+    border-bottom: 2px solid #dadada;
+}
+
+.logo {
+    color: #222;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #7ADFFB; 
+}
+
+.menu__items {
+    display: flex;
+    gap: 3vw;
+}
+
+.menu__items li {
+    list-style: none;
+}
+
+.menu__items li a {
+    color: #222;
+    font-size: 1.1vw;
+    font-weight: 500;
+    position: relative;
+    padding: 0.1vw 0;
+}
+
+.menu__items li a:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    background-color: transparent;
+    height: 2.5px;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu__items li a:hover::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    background-color: #7ADFFB;
+    height: 2.5px;
+    width: 100%;
+}
+
+i {
+    display: none;
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 64px);
+    width: 100%;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    padding: 10vw 5vw;
+}
+
+.left h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    margin-bottom: 2vw;
+}
+
+.left h2 span {
+    color: #7ADFFB;
+}
+
+.left p {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-bottom: 2vw;
+}
+
+.left .btn {
+    padding: 1vw 3vw;
+    background-color: #7ADFFB;
+    color: #222;
+    font-size: 1.1vw;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 5px 5px 0 0 #222;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.left .effect {
+    width: 250px;
+}
+
+.left .btn:hover {
+    box-shadow: 0 0 0 transparent;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+::selection {
+    background-color: #7ADFFB;
+    color: #222;
+}
+
+::-webkit-scrollbar {
+    background-color: #1e1f26;
+    height: 20px;
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #383d4d;
+    border-radius: 99em;
+    border: 6px solid #1e1f26;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 55px;
+    }
+
+    .container {
+        height: calc(100% - 55px);
+    }
+    .logo {
+        font-size: 2.5vw;
+    }
+
+    .menu__items li a {
+        font-size: 1.8vw;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .left h2 {
+        font-size: 5vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .left p {
+        font-size: 2vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .left .btn {
+        padding: 2vw 4.5vw;
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #loader h1 {
+        font-size: 10vw;
+    }
+    .logo {
+        font-size: 4vw;
+    }
+
+    .menu__items li {
+        display: none;
+    }
+
+    i {
+        display: block;
+        font-size: 6vw;
+        font-weight: 600;
+    }
+
+    .left h2 {
+        font-size: 8vw;
+        margin-bottom: 7.5vw;
+    }
+
+    .left p {
+        font-size: 4vw;
+        margin-bottom: 7.5vw;
+        line-height: 5vw;
+    }
+
+    .left .btn {
+        padding: 4vw 10vw;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+
+    ::-webkit-scrollbar {
+        background-color: #1e1f26;
+        height: 5px;
+        width: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #383d4d;
+        border-radius: 99em;
+        border: 6px solid #1e1f26;
+    }
+}
