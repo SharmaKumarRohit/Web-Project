@@ -1,0 +1,173 @@
+@media screen and (max-width: 1023px) {
+  .long-copy {
+    width: 80%;
+  }
+  .contact-form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #menu-open,
+  #menu-close {
+    display: block;
+    padding: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #menu-open {
+    color: #fff;
+  }
+  ul.nav-menu {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ebebeb;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+  }
+
+  ul.nav-menu li a:link,
+  ul.nav-menu li a:visited {
+    color: #212121ff;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .long-copy {
+    width: 90%;
+    margin-left: 4%;
+  }
+  .footer-nav ul {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+  .hero-text-box {
+    text-align: center;
+  }
+  .long-copy {
+    width: 100%;
+    margin-left: 2%;
+    text-align: center;
+  }
+  .meals-showcase li {
+    width: 50%;
+  }
+  .steps-content {
+    flex-direction: column;
+  }
+
+  .steps-left {
+    width: 36%;
+  }
+
+  .steps-left img {
+    width: 100%;
+  }
+  .steps-right {
+    width: 50%;
+    margin-top: 2rem;
+  }
+  .cities-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cities-content {
+    width: 48%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .long-copy {
+    margin-left: 0;
+  }
+  .cities-content {
+    width: 100%;
+  }
+  .plan-price {
+    font-size: 250%;
+    font-weight: 300;
+  }
+  .work-steps {
+    gap: 0.85rem;
+  }
+  .work-steps div {
+    width: 45px;
+    height: 45px;
+    border: 3px solid #e67e22;
+    font-size: 1.15rem;
+  }
+  .form-group {
+    grid-template-columns: 1fr;
+  }
+  input[type="submit"] {
+    justify-self: center;
+  }
+  h2 {
+    font-size: 165%;
+    margin-bottom: 30px;
+  }
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #menu-close {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+  }
+  h1 {
+    font-size: 170%;
+  }
+  .hero-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn-full:link,
+  .btn-full:visited {
+    margin-right: 0;
+  }
+  .steps-left {
+    width: 60%;
+  }
+  .steps-right {
+    width: 100%;
+  }
+  .btn-app {
+    height: 40px;
+  }
+  .download-app {
+    gap: 0.5rem;
+  }
+  .footer-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer {
+    padding: 40px 0;
+  }
+}
